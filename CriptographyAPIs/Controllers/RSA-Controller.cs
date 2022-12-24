@@ -3,12 +3,11 @@ using CriptographyAPIs.RSA;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-
 namespace CriptographyAPIs.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+
 
     /// <response code="200">When the pin and the amount are correct</response>
     /// <response code="412">When you enter invalid input</response>
@@ -17,11 +16,11 @@ namespace CriptographyAPIs.Controllers
         [HttpPost("RSA-Encryption")]
         [ProducesResponseType((int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.PreconditionFailed)]
-
         public IActionResult RSAen(RSAmodel data) 
         {
             return RSACrypt.Crypt(data);
         }
+
 
         [HttpPost("RSA-Decryption")]
         [ProducesResponseType((int)HttpStatusCode.OK)]

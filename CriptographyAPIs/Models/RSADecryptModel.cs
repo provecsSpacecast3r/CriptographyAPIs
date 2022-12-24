@@ -7,8 +7,8 @@ namespace CriptographyAPIs.Models
     {
         [Required]
         public string CipheredText { get; set; }
-        public int D { get; set; }
-        public int N { get; set; }
+        public string D { get; set; }
+        public string N { get; set; }
 
     }
 }

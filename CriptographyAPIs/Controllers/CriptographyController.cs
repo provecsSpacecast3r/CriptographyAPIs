@@ -10,10 +10,6 @@ namespace CriptographyAPIs.Controllers
     public class CriptographyController : ControllerBase
     {
 
-        /// <response code="200">When the pin and the amount are correct</response>
-        /// <response code="412">When you enter invalid input</response>
-
-        
         [HttpPost("CryptROT-13")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status412PreconditionFailed)]
